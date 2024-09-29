@@ -1,0 +1,146 @@
+*,
+*::after,
+*::before {
+
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+:root {
+    --main_color: #232946;
+    --secondary_color: #b8c1ec;
+    --accent_color: gray;
+    --font-color: #fffffe;
+}
+
+body {
+    background-color: var(--main_color);
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--font-color);
+    /* max-width: 800px; */
+
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    gap: 1rem;
+}
+
+.btn {
+    padding: .8rem;
+    border: none;
+    background-color: var(--main_color);
+    box-shadow: 0 0 2px black;
+    border-radius: 6px;
+    transition: background 200ms ease-in;
+    color: var(--font-color);
+    text-transform: uppercase;
+}
+
+.btn:hover {
+    background-color: var(--secondary_color);
+    color: black;
+}
+
+#my-todos {
+    width: inherit;
+    height: inherit;
+    overflow: auto;
+    list-style: none;
+}
+
+#text-input {
+    padding: .3rem;
+    /* outline: ; */
+}
+
+.item-todo {
+    padding: .9rem;
+    background-color: #3f2346;
+    color: var(--font-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 290px;
+    gap: 1.2rem;
+}
+
+.clock-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #b8c1ec;
+    width: 400px;
+    color: black;
+    padding: 1.5rem;
+    border-radius: 5px;
+    font-size: 2rem;
+
+}
+
+.container-todos {
+    max-height: 300px;
+    max-width: 400px;
+    /* padding: 2rem; */
+    overflow: auto;
+}
+
+.check,
+.delete,
+.favorite {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: transform ease-in 200ms;
+    margin-left: 10px;
+}
+
+.check:hover,
+.delete:hover,
+.favorite:hover {
+    transform: scale(1.5);
+}
+/* .favorite-todo::after{
+    width: 10px;
+    height: 10px;
+    position: relative;
+    content: " ";
+    border-radius: 50%;
+    background-color: yellow;
+
+} */
+.favorite-todo{
+    border-bottom: 2px solid yellow;
+}
+
+.check-full {
+    background: green;
+}
+.btn-delete{
+    background-color: rgb(48, 7, 7);
+    cursor: pointer;
+}
+.btn-delete:hover{
+    background-color: rgb(95, 18, 34);
+    color: var(--font-color);
+}
+.btn-submit{
+    /* height: 20px; */
+}
+
+#quote{
+    padding: 10px 0 0 0;
+    font-size: 1rem;
+    width: 70%;
+}
+.quote-phrase{
+    padding: 0 0 10px 0;
+
+}
